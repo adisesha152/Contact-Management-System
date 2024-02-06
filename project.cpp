@@ -230,12 +230,11 @@ void Contact::display_contact()
         for (const Contact &contact : contacts)
         {
             cout << "Name: " << contact.name << endl;
-            cout << "Phone: ";
+            cout << "Phone Numbers:" << endl;
             for (const string &phoneNumber : contact.phone)
             {
-                cout << phoneNumber << " ";
+                cout << "  - " << phoneNumber << endl;
             }
-            cout << endl;
             cout << "Email: " << contact.email << endl;
             cout << "Address: " << contact.address << endl;
             cout << "--------------------------------------" << endl;
@@ -254,16 +253,20 @@ void Contact::save_contacts(const string &filename)
 
     for (const Contact &contact : contacts)
     {
-        outFile << contact.name << ',';
-        for (size_t i = 0; i < contact.phone.size(); ++i)
+        vector<string> contactData;
+        contactData.push_back(contact.name);
+        for (const string &phoneNumber : contact.phone)
         {
-            outFile << contact.phone[i];
-            if (i != contact.phone.size() - 1)
-            {
-                outFile << ',';
-            }
+            contactData.push_back(phoneNumber);
         }
-        outFile << ',' << contact.email << ',' << contact.address << '\n';
+        contactData.push_back(contact.email);
+        contactData.push_back(contact.address);
+
+        for (const string &data : contactData)
+        {
+            outFile << data << ',';
+        }
+        outFile << '\n';
     }
 
     outFile.close();
@@ -294,6 +297,7 @@ void Contact::load_contacts(const string &filename)
             string phoneStr = line.substr(pos1 + 1, pos2 - pos1 - 1);
             string email = line.substr(pos2 + 1, pos3 - pos2 - 1);
             string address = line.substr(pos3 + 1);
+            
             vector<string> phones;
             size_t prevPos = 0;
             size_t commaPos;
