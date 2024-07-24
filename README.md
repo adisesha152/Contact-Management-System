@@ -1,15 +1,47 @@
-The Contact Management System allows users to efficiently manage, organize, store, retrieve, update, and delete contact details. It typically includes features such as:
+Contact Management System
 
-1. **Contact Information Storage**: Users can input details such as name, phone number, email address, and address.
+Overview
 
-2. **Search Functionality**: The system provides a search feature to quickly locate contacts based on name criteria.
+The Contact Management System is a console-based application developed in C++. This system allows users to manage their contacts with functionalities for creating, modifying, deleting, searching, displaying, saving, and loading contact information. It supports multiple phone numbers per contact and ensures efficient management through a simple user interface.
 
-3. **Add, Modify, and Delete Contacts**: Users can add new contacts to the system, modify existing contact details, and delete contacts if necessary.
+Features
 
-4. **Sorting and Filtering**: Contacts can be sorted alphabetically.
+	•	Contact Management:
+	•	Create new contacts
+	•	Modify existing contacts
+	•	Delete contacts
+	•	Search for contacts by name
+	•	Display all contacts
+	•	Multiple Phone Numbers: Manage multiple phone numbers for each contact.
+	•	File Operations:
+	•	Save contacts to a file
+	•	Load contacts from a file
+	•	User Interface: Intuitive console-based menu system.
 
-5. **Data Persistence**: Contact details should be stored persistently, typically file handling is being used, to ensure that the information is retained even after the program is closed and reopened.
+ Welcome to Contact Management System!
 
-6. **Error Handling**: Error Handling is being included.
+  1. Create Contact
+  2. Modify Contact
+  3. Delete Contact
+  4. Search Contact
+  5. Display Contact
+  6. Exit
+  Enter your Choice:
 
-By a Contact Management System project in C++, users can effectively organize their contacts and streamline communication processes. This project provides a practical application of fundamental C++ concepts such as data structures, file handling, and user input/output handling.
+Technologies Used
+
+	•	C++
+	•	Standard Template Library (STL)
+	•	Object-Oriented Programming (OOP) principles
+
+How to Run
+
+	1.	Clone the repository.
+	2.	Compile the source code using a C++ compiler.
+	3.	Run the executable to start the Contact Management System.
+
+Future Enhancements
+
+	•	Implement a graphical user interface (GUI).
+	•	Integrate a database for persistent storage.
+	•	Add more advanced search and filtering options.
